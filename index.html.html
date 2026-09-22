@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Planet Earth</title>
+<meta name="description" content="Planet Earth is the third planet from the Sun and the only known planet where life exists.">
+<style>
+  :root{
+    --bg:#eef4fb;
+    --bg2:#dce8f7;
+    --card:#ffffff;
+    --text:#1b2733;
+    --accent:#2b6cb0;
+    --accent2:#1a4d8f;
+    --muted:#5a6b7a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0f1a;
+      --bg2:#0d1526;
+      --card:#131c2b;
+      --text:#e8eef5;
+      --accent:#7fb4ea;
+      --accent2:#a9cdf3;
+      --muted:#8fa3b8;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0f1a;
+    --bg2:#0d1526;
+    --card:#131c2b;
+    --text:#e8eef5;
+    --accent:#7fb4ea;
+    --accent2:#a9cdf3;
+    --muted:#8fa3b8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:linear-gradient(180deg,var(--bg),var(--bg2));
+    color:var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    display:flex;
+    justify-content:center;
+    padding-left:16px;
+    padding-right:16px;
+  }
+  main{
+    max-width:640px;
+    width:100%;
+    padding:48px 0 64px;
+  }
+  h1{
+    font-size:2.6em;
+    margin-bottom:0;
+    font-weight:700;
+    letter-spacing:-0.5px;
+    color:var(--text);
+    text-align:center;
+  }
+  h2.subheading{
+    font-weight:400;
+    color:var(--accent);
+    text-align:center;
+    margin-top:6px;
+    font-size:1.15em;
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+  .earth-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:44px 0;
+  }
+  svg{
+    width:240px;
+    height:240px;
+    filter:drop-shadow(0 18px 30px rgba(20,60,110,0.35));
+  }
+  h3{
+    color:var(--text);
+    font-weight:600;
+    font-size:1.25em;
+    border-bottom:2px solid var(--accent);
+    padding-bottom:8px;
+    margin-top:44px;
+  }
+  p{
+    line-height:1.7;
+    font-size:1.05em;
+    color:var(--text);
+  }
+  footer{
+    margin-top:56px;
+    font-size:0.85em;
+    color:var(--muted);
+    text-align:center;
+    letter-spacing:0.5px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Planet Earth</h1>
+  <h2 class="subheading">Our Planet</h2>
+
+  <div class="earth-wrap">
+    <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="ocean" cx="35%" cy="30%" r="75%">
+          <stop offset="0%" stop-color="#5b9bd9"/>
+          <stop offset="55%" stop-color="#2b6cb0"/>
+          <stop offset="100%" stop-color="#123a63"/>
+        </radialGradient>
+        <radialGradient id="shade" cx="65%" cy="70%" r="70%">
+          <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+        </radialGradient>
+        <radialGradient id="shine" cx="32%" cy="26%" r="30%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="sphereClip">
+          <circle cx="120" cy="120" r="105"/>
+        </clipPath>
+      </defs>
+
+      <circle cx="120" cy="120" r="105" fill="url(#ocean)"/>
+
+      <g clip-path="url(#sphereClip)" fill="#3fa34d">
+        <path d="M40 95 C55 70 85 62 100 75 C112 85 108 100 95 108 C100 118 92 130 78 128 C60 126 42 118 40 95Z"/>
+        <path d="M95 45 C110 38 130 42 132 55 C133 65 120 68 110 64 C100 60 92 52 95 45Z"/>
+        <path d="M150 70 C168 65 190 75 195 95 C198 112 185 122 170 118 C168 132 150 140 138 128 C128 118 132 100 140 90 C142 82 145 74 150 70Z"/>
+        <path d="M150 150 C165 145 180 155 178 172 C176 186 160 192 148 184 C138 177 138 160 150 150Z"/>
+        <path d="M70 150 C82 145 95 152 94 165 C93 176 80 182 70 175 C62 169 63 156 70 150Z"/>
+      </g>
+
+      <circle cx="120" cy="120" r="105" fill="url(#shade)"/>
+      <circle cx="120" cy="120" r="105" fill="url(#shine)"/>
+      <circle cx="120" cy="120" r="105" fill="none" stroke="#0d2f52" stroke-opacity="0.3" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <p>
+    Earth is a planet in our solar system. It is the third planet from the Sun.
+  </p>
+
+  <h3>Planet Earth and the Solar System</h3>
+  <p>
+    There are eight planets in our solar system. Each planet is different. Earth is the only known planet where life exists.
+  </p>
+
+  <h3>SEO</h3>
+  <p>
+    The word "planet" is used in the URL, title, heading, subheadings and paragraphs to help the webpage appear higher in search results.
+  </p>
+
+  <footer>
+    www.planetearth.com
+  </footer>
+</main>
+</body>
+</html>
